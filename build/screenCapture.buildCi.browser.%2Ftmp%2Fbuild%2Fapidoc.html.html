@@ -1,0 +1,1051 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>weex-devtool (v0.2.80)</a>
+</h1>
+<h4>weex developer tool for debugging weex app with chrome devtool</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weex-devtool">module weex-devtool</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weex-devtool.</span>Builder</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weex-devtool.</span>DebugServer</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weex-devtool.</span>Hosts</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weex-devtool.</span>LogStyle</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weex-devtool.</span>Logger</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weex-devtool.</span>UpgradeNotice</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weex-devtool.</span>api</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan"></span>weex-devtool</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weex-devtool.Builder">module weex-devtool.Builder</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weex-devtool.Builder.copy">
+            function <span class="apidocSignatureSpan">weex-devtool.Builder.</span>copy
+            <span class="apidocSignatureSpan">(source)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weex-devtool.Builder.loader">
+            function <span class="apidocSignatureSpan">weex-devtool.Builder.</span>loader
+            <span class="apidocSignatureSpan">(source)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weex-devtool.Builder.transformer">
+            function <span class="apidocSignatureSpan">weex-devtool.Builder.</span>transformer
+            <span class="apidocSignatureSpan">(source)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weex-devtool.DebugServer">module weex-devtool.DebugServer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weex-devtool.DebugServer.start">
+            function <span class="apidocSignatureSpan">weex-devtool.DebugServer.</span>start
+            <span class="apidocSignatureSpan">(port, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weex-devtool.Hosts">module weex-devtool.Hosts</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weex-devtool.Hosts.findRealHost">
+            function <span class="apidocSignatureSpan">weex-devtool.Hosts.</span>findRealHost
+            <span class="apidocSignatureSpan">(domain)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weex-devtool.Hosts.isValidLocalHost">
+            function <span class="apidocSignatureSpan">weex-devtool.Hosts.</span>isValidLocalHost
+            <span class="apidocSignatureSpan">(host)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weex-devtool.LogStyle">module weex-devtool.LogStyle</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weex-devtool.LogStyle.dressUp">
+            function <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>dressUp
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>BG_BLACK</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>BG_BLUE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>BG_CYAN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>BG_GREEN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>BG_PURPLE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>BG_RED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>BG_WHITE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>BG_YELLOW</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>BRIGHT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>DARK</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>FG_BLACK</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>FG_BLUE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>FG_CYAN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>FG_GREEN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>FG_PURPLE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>FG_RED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>FG_WHITE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>FG_YELLOW</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>REVERSE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>UNDERLINE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>LEVEL_COLOR</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weex-devtool.Logger">module weex-devtool.Logger</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weex-devtool.Logger.debug">
+            function <span class="apidocSignatureSpan">weex-devtool.Logger.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weex-devtool.Logger.error">
+            function <span class="apidocSignatureSpan">weex-devtool.Logger.</span>error
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weex-devtool.Logger.log">
+            function <span class="apidocSignatureSpan">weex-devtool.Logger.</span>log
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weex-devtool.Logger.printMessage">
+            function <span class="apidocSignatureSpan">weex-devtool.Logger.</span>printMessage
+            <span class="apidocSignatureSpan">(message, prefix)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weex-devtool.Logger.warn">
+            function <span class="apidocSignatureSpan">weex-devtool.Logger.</span>warn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weex-devtool.UpgradeNotice">module weex-devtool.UpgradeNotice</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weex-devtool.UpgradeNotice.run">
+            function <span class="apidocSignatureSpan">weex-devtool.UpgradeNotice.</span>run
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.weex-devtool.api">module weex-devtool.api</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.weex-devtool.api.startServerAndLaunchDevtool">
+            function <span class="apidocSignatureSpan">weex-devtool.api.</span>startServerAndLaunchDevtool
+            <span class="apidocSignatureSpan">(entry, root, port, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weex-devtool" id="apidoc.module.weex-devtool">module weex-devtool</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weex-devtool.Builder" id="apidoc.module.weex-devtool.Builder">module weex-devtool.Builder</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weex-devtool.Builder.copy" id="apidoc.element.weex-devtool.Builder.copy">
+        function <span class="apidocSignatureSpan">weex-devtool.Builder.</span>copy
+        <span class="apidocSignatureSpan">(source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">copy = function (source) {
+    var targetPath = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : '';
+
+    return new Promise(function (resolve, reject) {
+        var targetDir = Path.join(__dirname, '../../frontend/', Config.bundleDir, targetPath, Path.basename(source));
+        Mkdirp.sync(Path.dirname(targetDir));
+        var input = Fs.createReadStream(source);
+        var output = Fs.createWriteStream(targetDir);
+        input.pipe(output, {
+            end: false
+        });
+        input.on('end', function () {
+            output.end();
+            resolve(targetDir);
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weex-devtool.Builder.loader" id="apidoc.element.weex-devtool.Builder.loader">
+        function <span class="apidocSignatureSpan">weex-devtool.Builder.</span>loader
+        <span class="apidocSignatureSpan">(source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loader = function (source) {
+    var targetPath = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : '';
+
+    return new Promise(function (resolve, reject) {
+        var ext = Path.extname(source);
+        var basename = Path.basename(source, ext);
+        var targetDir = Path.join(__dirname, '../../frontend/', Config.bundleDir, targetPath);
+        var weexLoaderRoot = Path.join(__dirname, "../../node_modules");
+        if (!Fs.existsSync(Path.join(weexLoaderRoot, 'weex-loader'))) {
+            weexLoaderRoot = Path.join(__dirname, "../../..");
+        }
+        var bannerPlugin = new Webpack.BannerPlugin('// { "framework": "' + ext2Name[ext] + '" }\n', { raw: true });
+        var webpackConfig = {
+            entry: source + '?entry=true',
+            output: {
+                path: targetDir,
+                filename: basename + '.js'
+            },
+            devtool: Config.min ? 'source-map' : '#inline-source-map',
+            module: {
+                loaders: [{
+                    test: /\.we(\?[^?]+)?$/,
+                    loader: 'weex'
+                }, {
+                    test: /\.vue(\?[^?]+)?$/,
+                    loader: 'weex'
+                }]
+            },
+            resolve: {
+                alias: {
+                    'babel-runtime': loadModulePath('babel-runtime', 'core-js'),
+                    'babel-polyfill': loadModulePath('babel-polyfill')
+                }
+            },
+            resolveLoader: {
+                root: weexLoaderRoot
+            },
+            plugins: [bannerPlugin]
+
+        };
+        if (Config.min) {
+            webpackConfig.plugins.push(new Webpack.optimize.UglifyJsPlugin({
+                compress: {
+                    warnings: false
+                }
+            }));
+        }
+        Webpack(webpackConfig, function (err, stats) {
+            if (err) {
+                return reject(err);
+            }
+            var jsonStats = stats.toJson();
+            if (jsonStats.errors.length &gt; 0) {
+                Logger.error('[webpack errors]\n', jsonStats.errors.join('\n'));
+                return reject('');
+            }
+            if (jsonStats.warnings.length &gt; 0) {
+                Logger.warn('[webpack warnings]', jsonStats.warnings.join('\n'));
+            }
+            resolve(targetDir + '/' + basename + '.js');
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weex-devtool.Builder.transformer" id="apidoc.element.weex-devtool.Builder.transformer">
+        function <span class="apidocSignatureSpan">weex-devtool.Builder.</span>transformer
+        <span class="apidocSignatureSpan">(source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">transformer = function (source) {
+    var targetPath = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : '';
+
+    return new Promise(function (resolve, reject) {
+        Fs.readFile(source, function (err, fileContent) {
+            if (err) {
+                console.error(err);
+                return reject(err);
+            }
+            var output = Transformer.transform(Path.basename(source, '.we'), fileContent.toString());
+            var targetDir = Path.join(__dirname, '../../frontend/', Config.bundleDir, targetPath, Path.basename(source, '.we') + '.
+js');
+            Mkdirp.sync(Path.dirname(targetDir));
+            Fs.writeFileSync(targetDir, output.result);
+            resolve(targetDir);
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weex-devtool.DebugServer" id="apidoc.module.weex-devtool.DebugServer">module weex-devtool.DebugServer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weex-devtool.DebugServer.start" id="apidoc.element.weex-devtool.DebugServer.start">
+        function <span class="apidocSignatureSpan">weex-devtool.DebugServer.</span>start
+        <span class="apidocSignatureSpan">(port, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (port, cb) {
+    app.use(bodyParser());
+    app.ws.use(WsRouter.routes());
+    app.on('error', function (err, ctx) {
+        if (Config.verbose) {
+            if (err.status == 404) {
+                console.log('404');
+            } else {
+                console.error(err);
+            }
+        }
+    });
+<span class="apidocCodeCommentSpan">    /*
+     ===================================
+     Http Router
+     ===================================
+     */
+</span>
+    app.use(HttpRouter.routes());
+    app.use(ServeStatic(rootPath));
+
+    app.listen(port, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+
+  if (Config.root) {
+    console.log('\nDirectory[' + Program.file + '] has been mapped to http://' + ip + ':' + port + &amp;#
+x27;/' + Config.bundleDir + '/');
+  }
+
+  console.info('\nThe websocket address for native is ' + LogStyle.dressUp('ws://' + ip + ':' + port
+ + '/debugProxy/native', LogStyle.FG_YELLOW, LogStyle.BRIGHT));
+  DebugServer.<span class="apidocCodeKeywordSpan">start</span>(port, cb);
+
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weex-devtool.Hosts" id="apidoc.module.weex-devtool.Hosts">module weex-devtool.Hosts</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weex-devtool.Hosts.findRealHost" id="apidoc.element.weex-devtool.Hosts.findRealHost">
+        function <span class="apidocSignatureSpan">weex-devtool.Hosts.</span>findRealHost
+        <span class="apidocSignatureSpan">(domain)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findRealHost = function (domain) {
+    var hosts = HostsParser.get();
+
+    for (var key in hosts) {
+        if (hosts.hasOwnProperty(key)) {
+            var domains = hosts[key];
+            if (domains.indexOf(domain) != -1) {
+                return key;
+            }
+        }
+    }
+    return domain;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+////////////////////////////////////////////////////////////////////////////
+
+function buildAndStart() {
+if (/^https?:\/\//.test(Program.file)) {
+    var url = Program.file.replace(/^(https?:\/\/)([^/:]+)(?=:\d+|\/)/, function (m, a, b) {
+        if (!/\d+\.\d+\.\d+\.\d+/.test(a)) {
+            return a + Hosts.<span class="apidocCodeKeywordSpan">findRealHost</span>(b);
+        }
+        else {
+            return m;
+        }
+    });
+    Config.entryBundleUrl = url;
+    startServerAndLaunchDevtool();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weex-devtool.Hosts.isValidLocalHost" id="apidoc.element.weex-devtool.Hosts.isValidLocalHost">
+        function <span class="apidocSignatureSpan">weex-devtool.Hosts.</span>isValidLocalHost
+        <span class="apidocSignatureSpan">(host)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValidLocalHost = function (host) {
+    var ipMap = os.networkInterfaces();
+    var flag = false;
+    for (var name in ipMap) {
+        if (ipMap.hasOwnProperty(name)) {
+            var ips = ipMap[name];
+            ips.forEach(function (ip) {
+                if (host == ip.address) {
+                    flag = true;
+                    return true;
+                }
+            });
+        }
+    }
+    return flag;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//fix tj's commander bug overwrite --version
+if (Program.version == undefined) {
+    console.log(packageInfo.version);
+    Exit(0);
+}
+var supportMode = ['loader', 'transformer'];
+
+if (Program.host &amp;&amp; !Hosts.<span class="apidocCodeKeywordSpan">isValidLocalHost</span>(Program.host)) {
+    console.log('[' + Program.host + '] is not your local address!');
+    Exit(0);
+}
+
+Config.verbose = Program.verbose;
+Config.port = Program.port;
+Config.local = Program.local;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weex-devtool.LogStyle" id="apidoc.module.weex-devtool.LogStyle">module weex-devtool.LogStyle</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weex-devtool.LogStyle.dressUp" id="apidoc.element.weex-devtool.LogStyle.dressUp">
+        function <span class="apidocSignatureSpan">weex-devtool.LogStyle.</span>dressUp
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dressUp = function (text) {
+    return '\033[' + Array.prototype.slice.call(arguments, 1).join(';') + 'm' + text + '\033[0m';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var DebugServer = require('./lib/DebugServer');
+
+api.startServerAndLaunchDevtool = function startServerAndLaunchDevtool(entry, root, port, cb){
+port =  port || 8088; //Program.port;
+var ip = IP.address();
+Config.ip = ip;
+Config.local=true;
+console.info('start debugger server at ' + LogStyle.<span class="apidocCodeKeywordSpan">dressUp</span>('http://&amp;#
+x27; + ip + ':' + port, LogStyle.FG_YELLOW, LogStyle.BRIGHT));
+
+if (entry) {
+  Config.entryBundleUrl = 'http://' + ip + ':' + port + Path.join('/' + Config.bundleDir, Path.basename
+(entry).replace(/\.we$/, '.js')).replace(/\\/g,'/');
+  console.log('\nYou can visit we file(s) use ' + Config.entryBundleUrl);
+  console.log('Also you can use Playground App to scan the qrcode on device list page.');
+}
+if (Config.entryBundleUrl) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weex-devtool.Logger" id="apidoc.module.weex-devtool.Logger">module weex-devtool.Logger</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weex-devtool.Logger.debug" id="apidoc.element.weex-devtool.Logger.debug">
+        function <span class="apidocSignatureSpan">weex-devtool.Logger.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debug = function () {
+    for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 &lt; _len3; _key3++) {
+        args[_key3] = arguments[_key3];
+    }
+
+    _log('debug', args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var _this = (0, _possibleConstructorReturn3.default)(this, (Peer.__proto__ || Object.getPrototypeOf(Peer)).call(this));
+
+_this.messageBuffer = [];
+_this.websocket = websocket;
+_this.websocket.on('close', function () {
+    if (!_this.websocket.removed) {
+        Logger.<span class="apidocCodeKeywordSpan">debug</span>('socket close:', _this.websocket._info);
+        if (_this.oppositePeer) {
+            _this.oppositePeer.oppositePeer = null;
+        }
+        _this.oppositePeer = null;
+        _this.websocket = null;
+        if (_this.messageBuffer.length &gt; 0) {}
+        _this.messageBuffer = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weex-devtool.Logger.error" id="apidoc.element.weex-devtool.Logger.error">
+        function <span class="apidocSignatureSpan">weex-devtool.Logger.</span>error
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function () {
+    for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 &lt; _len2; _key2++) {
+        args[_key2] = arguments[_key2];
+    }
+
+    _log('error', args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    Config.entryBundleUrl = url;
+    startServerAndLaunchDevtool();
+}
+else {
+    var filePath = Path.resolve(Program.file);
+    var ext = Path.extname(filePath);
+    if (!Fs.existsSync(filePath)) {
+        console.<span class="apidocCodeKeywordSpan">error</span>(filePath + ': No such file or directory');
+        return Exit(0);
+    }
+    if (ext == '.we' || ext == '.vue') {
+        console.log('building...');
+        console.time('Build completed!');
+        buildFileAndWatchIt(Program.mode, filePath).then(function () {
+            console.timeEnd('Build completed!');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weex-devtool.Logger.log" id="apidoc.element.weex-devtool.Logger.log">
+        function <span class="apidocSignatureSpan">weex-devtool.Logger.</span>log
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function () {
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key &lt; _len; _key++) {
+        args[_key] = arguments[_key];
+    }
+
+    _log('log', args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var ip = IP.address();
+Config.ip = ip;
+Config.local=true;
+console.info('start debugger server at ' + LogStyle.dressUp('http://' + ip + ':' + port, LogStyle.
+FG_YELLOW, LogStyle.BRIGHT));
+
+if (entry) {
+  Config.entryBundleUrl = 'http://' + ip + ':' + port + Path.join('/' + Config.bundleDir, Path.basename
+(entry).replace(/\.we$/, '.js')).replace(/\\/g,'/');
+  console.<span class="apidocCodeKeywordSpan">log</span>('\nYou can visit we file(s) use ' + Config.entryBundleUrl);
+  console.log('Also you can use Playground App to scan the qrcode on device list page.');
+}
+if (Config.entryBundleUrl) {
+  Config.entryBundleUrl = Config.entryBundleUrl.replace(/127\.0\.0\.1/g, Config.ip);
+  //fixme ugly ä¸Žå…·ä½“è€¦åˆçš„é€»è¾‘ æ˜“å˜ï¼
+  var urlObj = Url.parse(Config.entryBundleUrl, true);
+  if (!/wh_weex=true/.test(Config.entryBundleUrl)&amp;&amp;!urlObj.query['_wx_tpl']) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weex-devtool.Logger.printMessage" id="apidoc.element.weex-devtool.Logger.printMessage">
+        function <span class="apidocSignatureSpan">weex-devtool.Logger.</span>printMessage
+        <span class="apidocSignatureSpan">(message, prefix)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">printMessage = function (message, prefix) {
+    if (message.method == 'WxDebug.callJS') {
+        exports.log('[' + prefix + '] callJS:', message.params.method);
+    } else if (message.method == 'WxDebug.callNative') {
+        exports.log('[' + prefix + '] callNative:(' + message.params.instance, message.params.tasks.map(function (task) {
+            return task.module + '.' + task.method;
+        }), ')');
+    } else if (message.method == 'WxDebug.registerDevice') {
+        exports.log('[' + prefix + ']', message);
+    } else {
+        if (message.method) {
+            if (message.method != 'Page.screencastFrame') exports.log('[' + prefix + ']', message.method);
+        } else {
+            exports.log('[' + prefix + ']', message);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    //P2PSession.postMessage(this.websocket, {method: "WxDebug.reload"});
+} else {
+        //console.log('enable remote debug');
+        //P2PSession.postMessage(this.websocket, {method: "WxDebug.enable"});
+    }
+this.websocket.on('message', function (message) {
+    message = JSON.parse(message);
+    Logger.<span class="apidocCodeKeywordSpan">printMessage</span>(message, 'chrome');
+    if (message.method === 'WxDebug.enable' || message.method === 'WxDebug.disable') {
+        var peer = P2PSession.findOppositePeer(this);
+        if (peer) {
+            var device = DeviceManager.getDeviceById(peer.websocket._deviceId);
+            if (device) {
+                device.deviceInfo.remoteDebug = message.method === 'WxDebug.enable' ? true : false;
+            }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.weex-devtool.Logger.warn" id="apidoc.element.weex-devtool.Logger.warn">
+        function <span class="apidocSignatureSpan">weex-devtool.Logger.</span>warn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warn = function () {
+    for (var _len4 = arguments.length, args = Array(_len4), _key4 = 0; _key4 &lt; _len4; _key4++) {
+        args[_key4] = arguments[_key4];
+    }
+
+    _log('warn', args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+        var jsonStats = stats.toJson();
+        if (jsonStats.errors.length &gt; 0) {
+            Logger.error('[webpack errors]\n', jsonStats.errors.join('\n'));
+            return reject('');
+        }
+        if (jsonStats.warnings.length &gt; 0) {
+            Logger.<span class="apidocCodeKeywordSpan">warn</span>('[webpack warnings]', jsonStats.warnings.join('
+;\n'));
+        }
+        resolve(targetDir + '/' + basename + '.js');
+    });
+});
+};
+exports.transformer = function (source) {
+var targetPath = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : '';
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weex-devtool.UpgradeNotice" id="apidoc.module.weex-devtool.UpgradeNotice">module weex-devtool.UpgradeNotice</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weex-devtool.UpgradeNotice.run" id="apidoc.element.weex-devtool.UpgradeNotice.run">
+        function <span class="apidocSignatureSpan">weex-devtool.UpgradeNotice.</span>run
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function () {
+    var npm = spawn(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['show', 'weex-devtool', 'version']);
+    npm.stdout.on('data', function (data) {
+        var latestVersion = data.toString().trim();
+        if (getVersionValue(version) &lt; getVersionValue(latestVersion)) {
+            console.log(LogStyle.dressUp('New version[' + latestVersion + '] of Weex debugger detected! Please update.(npm install
+ -g weex-toolkit)', LogStyle.FG_RED));
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.weex-devtool.api" id="apidoc.module.weex-devtool.api">module weex-devtool.api</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.weex-devtool.api.startServerAndLaunchDevtool" id="apidoc.element.weex-devtool.api.startServerAndLaunchDevtool">
+        function <span class="apidocSignatureSpan">weex-devtool.api.</span>startServerAndLaunchDevtool
+        <span class="apidocSignatureSpan">(entry, root, port, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function startServerAndLaunchDevtool(entry, root, port, cb){
+  port =  port || 8088; //Program.port;
+  var ip = IP.address();
+  Config.ip = ip;
+  Config.local=true;
+  console.info('start debugger server at ' + LogStyle.dressUp('http://' + ip + ':' + port, LogStyle.FG_YELLOW, LogStyle.BRIGHT));
+
+  if (entry) {
+    Config.entryBundleUrl = 'http://' + ip + ':' + port + Path.join('/' + Config.bundleDir, Path.basename(entry).replace(/\.we$/, '.
+js')).replace(/\\/g,'/');
+    console.log('\nYou can visit we file(s) use ' + Config.entryBundleUrl);
+    console.log('Also you can use Playground App to scan the qrcode on device list page.');
+  }
+  if (Config.entryBundleUrl) {
+    Config.entryBundleUrl = Config.entryBundleUrl.replace(/127\.0\.0\.1/g, Config.ip);
+    //fixme ugly ä¸Žå…·ä½“è€¦åˆçš„é€»è¾‘ æ˜“å˜ï¼
+    var urlObj = Url.parse(Config.entryBundleUrl, true);
+    if (!/wh_weex=true/.test(Config.entryBundleUrl)&amp;&amp;!urlObj.query['_wx_tpl']) {
+        urlObj.query['_wx_tpl'] = Config.entryBundleUrl;
+        urlObj.search = '';
+        Config.entryBundleUrl = Url.format(urlObj);
+    }
+  }
+  if(root) {
+    Config.root = root;
+  }
+
+  if (Config.root) {
+    console.log('\nDirectory[' + Program.file + '] has been mapped to http://' + ip + ':' + port + '/' + Config.bundleDir + '/');
+  }
+
+  console.info('\nThe websocket address for native is ' + LogStyle.dressUp('ws://' + ip + ':' + port + '/debugProxy/native', LogStyle
+.FG_YELLOW, LogStyle.BRIGHT));
+  DebugServer.start(port, cb);
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
